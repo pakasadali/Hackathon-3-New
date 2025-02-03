@@ -92,7 +92,7 @@ export default function Cart() {
                     <div className="py-3 w-full flex flex-col items-center justify-center">
                         {
                             cart?.map((product) => (
-                                <div className="py-2 w-full flex items-center justify-between">
+                                <div key={product._id} className="py-2 w-full flex items-center justify-between">
                                     <p className="text-[16px] font-[500]">Subtotal</p>
                                     <p className="text-[#9f9f9f] text-[16px] font-[400]">Rs. {product.price * (product.quantity ?? 1)}</p>
                                 </div>
